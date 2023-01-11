@@ -1,0 +1,53 @@
+.block1{
+    display:flex;
+    margin-top: 20px;
+}
+.blockin{
+    width: 50%;
+    height: 400px;
+    display: flex;
+}
+.blk1{
+    width: 50%;
+    height: 400px;
+    position: absolute;
+}
+.blockimg{
+    width: 90%;
+    margin-left: 35px;
+}
+.blkBtn{
+    width: 22%;
+    height: 40px;
+    position: relative;
+    margin-top: 35%;
+    margin-left: 18%;
+}
+.blkBtn button {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: #9c51e0;
+    color: white;
+    font-weight: 400;
+    border-width: 0px;
+    cursor: pointer;
+}
+.blkBtn2{
+    width: 22%;
+    height: 40px;
+    position: relative;
+    margin-top: 35%;
+    margin-left: 57%;
+}
+.blkBtn2 button {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: #9c51e0;
+    color: white;
+    font-weight: 400;
+    border-width: 0px;
+    cursor: pointer;
+}
+

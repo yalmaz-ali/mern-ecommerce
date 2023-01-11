@@ -1,0 +1,79 @@
+.aboutMain {
+  background-color: white;
+  width: 100%;
+  height: 1800px;
+}
+
+.arow {
+  height: 550px;
+  display: flex;
+  flex-direction: row;
+}
+
+.acol {
+  width: 50%;
+}
+.atextMain{
+  padding: 60px;
+  margin-top: 20px;
+  background-image: url(../../images/data/WEL.png);
+  background-position: top;
+  background-position-x: left;
+  background-size: 400px;
+  background-repeat: no-repeat;
+}
+.atext-1 {
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.atext-11 {
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+.atext-2 {
+  color: gray;
+}
+.atext-3 {
+  color: gray;
+  font-weight: bold;
+}
+.abtn-explore {
+  color: white;
+  height: 40px;
+  font-size: 15px;
+  width: 150px;
+  background-color:#9c51e0;
+  border-radius: 2px;
+  border-width: 0px;
+  cursor: pointer;
+}
+.abtn-container {
+  padding-top: 20px;
+}
+.aimgMain{
+  border-radius: 5px;
+  background-color: darkcyan;
+  width: 480px;
+  height: 500px;
+  margin-left: 70px;
+  margin-top: 25px;
+  overflow: hidden;
+}
+.aimage-1 {
+  width: 480px;
+  height: 500px;
+}
+
+.aimage-map {
+  max-width: 90%;
+  margin-left: 30px;
+  padding: 10px;
+}
+
+.aform{
+  height: 700px;
+  width: 50%;
+}

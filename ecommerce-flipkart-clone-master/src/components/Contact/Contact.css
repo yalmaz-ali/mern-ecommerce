@@ -1,0 +1,72 @@
+.con {
+  padding: 40px;
+}
+.hd {
+  color: black;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-top: 50px;
+}
+.para {
+  color: black;
+  margin-bottom: 30px;
+}
+.label-name {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.input-div-about{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+input {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border-color: grey;
+  border-width: 1px;
+}
+.label-email {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.label-msg {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+textarea {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border-color: grey;
+  border-width: 1px;
+}
+input::placeholder {
+  font-size: 15px;
+  font-family: sans-serif;
+  width: 100%;
+  color: grey;
+}
+textarea::placeholder {
+  font-size: 15px;
+  font-family: sans-serif;
+  width: 100%;
+  color: grey;
+}
+.btn-msg {
+  margin-top: 50px;
+  color: white;
+  height: 40px;
+  font-size: 15px;
+  width: 100%;
+  background-color:#9c51e0;
+  border-radius: 3px;
+  border-width: 0px;
+  cursor: pointer;
+}
