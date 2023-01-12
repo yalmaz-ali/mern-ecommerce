@@ -14,7 +14,6 @@
     text-align: center;
 }
 .productImgContainer img{
-    max-width: 20px;
-    max-height: 20px;
-    object-fit: contain;
+    max-width: 100px;
+    object-fit:contain;
 }

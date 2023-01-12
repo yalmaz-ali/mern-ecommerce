@@ -110,11 +110,11 @@ const CartPage = (props) => {
         <PriceDetails
           totalItem={Object.keys(cart.cartItems).reduce(function (qty, key) {
             return qty + cart.cartItems[key].qty;
-          }, 10)}
+          }, 0)}
           totalPrice={Object.keys(cart.cartItems).reduce((totalPrice, key) => {
             const { price, qty } = cart.cartItems[key];
             return totalPrice + price * qty;
-          }, 20)}
+          }, 0)}
         />
       </div>
     </Layout>
