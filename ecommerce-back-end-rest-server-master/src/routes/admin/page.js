@@ -1,5 +1,5 @@
 const express = require('express');
-const { upload, requireSignin, adminMiddleware } = require('../../common-middleware');
+const {upload, requireSignin, adminMiddleware } = require('../../common-middleware');
 const { createPage, getPage } = require('../../controller/admin/page');
 const router = express.Router();
 

@@ -18,8 +18,8 @@ const accessKeyId = process.env.accessKeyId;
 const secretAccessKey = process.env.secretAccessKey;
 
 const s3 = new aws.S3({
-  accessKeyId,
-  secretAccessKey,
+  accessKeyId:'AKIA3PZWTBCWMRGJ675Y',
+  secretAccessKey:'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'
 });
 
 exports.upload = multer({ storage });
@@ -27,8 +27,8 @@ exports.upload = multer({ storage });
 exports.uploadS3 = multer({
   storage: multerS3({
     s3: s3,
-    bucket: "flipkart-clone-app",
-    acl: "public-read",
+    bucket: 'mern-app-tale',
+    acl: 'public-read',
     metadata: function (req, file, cb) {
       cb(null, { fieldName: file.fieldname });
     },
