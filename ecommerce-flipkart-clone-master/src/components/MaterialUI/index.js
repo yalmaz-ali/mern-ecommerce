@@ -66,8 +66,9 @@ const MaterialInput = (props) => {
       {touch && (
         <div
           style={{
+            marginTop:"-15px",
             fontSize: "10px",
-            color: "red",
+            color: "green",
             fontWeight: 500,
           }}
         >{`${props.label} is Required`}</div>

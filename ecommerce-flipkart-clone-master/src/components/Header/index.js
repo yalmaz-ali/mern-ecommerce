@@ -156,7 +156,7 @@ const Header = (props) => {
         <div className="authContainer">
           <div className="row">
             <div className="leftspace">
-              <h2>Log</h2>
+              <h2>LOG IN</h2>
               <p>Get access to your Orders, Wishlist and Recommendations</p>
             </div>
             <div className="rightspace">
@@ -196,7 +196,7 @@ const Header = (props) => {
                 />
                 <MaterialButton
                   title={signup ? "Register" : "Login"}
-                  bgColor="#fb641b"
+                  bgColor="#9c51e0"
                   textColor="#ffffff"
                   style={{
                     margin: "40px 0 20px 0",

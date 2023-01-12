@@ -32,8 +32,9 @@
 /* Material Input */
 .materialInput{
     width: 100%;
+    /* background-color: #fb641b; */
     min-width: 300px;
-    height: 30px;
+    height: 35px;
     border-bottom: 2px solid #2874f0;
     position: relative;
     /* background-color: red; */
@@ -46,7 +47,7 @@
     border: none;
     z-index: 1;
     background: transparent;
-    line-height: 30px;
+    line-height: 0px;
   }
   .materialInput .label{
     position: absolute;
@@ -91,13 +92,12 @@
     font-weight: 500;
     display: flex;
     justify-content: space-between;
-   
   }
 .dropdown{
-  right: 50%;
+  right: 70%;
   position: absolute;
-  width: 240px;
-  transform: translateX(50%);
+  width: 170px;
+  transform: translateX(20%);
   z-index: 1;
   display: none;
 }
@@ -122,7 +122,7 @@
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid #ffffff;
-    left: 50%;
+    left: 78%;
     transform: translateX(-50%);
   }
   .headerDropdownMenu{
