@@ -5,7 +5,7 @@
     position: sticky; 
     top: 0; 
     display:block;
-    z-index: 9;
+    z-index: 2;
 }
 
 .subHeader{
@@ -153,10 +153,9 @@
   height: 100%;
   color: #fff;
   letter-spacing: 1px;
-  background-image: url('../../images/login-image.png');
-  background-color: #2874f0;
+  background-image: url('../../images/data/signUp_img.jpg');
   background-repeat: no-repeat;
-  background-position: center 85%;
+  background-size: cover;
   padding: 40px 33px;
   box-sizing: border-box;
 }
@@ -164,6 +163,8 @@
 .rightspace{
   display: flex;
   flex: 1;
+  width: 60%;
+  height: 100%;
   flex-direction: column;
   align-items: center;
 }

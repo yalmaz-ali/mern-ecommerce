@@ -5,6 +5,7 @@ import ClothingAndAccessories from "./ClothingAndAccessories";
 import ProductPage from "./ProductPage";
 import ProductStore from "./ProductStore";
 import "./style.css";
+import MenuHeader from "../../components/MenuHeader";
 
 /**
  * @author
@@ -30,7 +31,10 @@ const ProductListPage = (props) => {
     return content;
   };
 
-  return <Layout>{renderProduct()}</Layout>;
+  return <Layout>
+    <MenuHeader />
+      {renderProduct()}
+    </Layout>;
 };
 
 export default ProductListPage;

@@ -75,7 +75,7 @@ const CartPage = (props) => {
       <div className="cartContainer" style={{ alignItems: "flex-start" }}>
         <Card
           headerLeft={`SHOPPING CART`}
-          headerRight={<div>Deliver to</div>}
+          headerRight={<div style={{fontWeight:"bold",color:"#9c51e0"}}>CART ITEMS</div>}
           style={{ width: "calc(100% - 400px)", overflow: "hidden" }}
         >
           {Object.keys(cartItems).map((key, index) => (
@@ -99,9 +99,9 @@ const CartPage = (props) => {
               boxSizing: "border-box",
             }}
           >
-            <div style={{ width: "250px" }}>
+            <div style={{ width: "250px",margin:"5px" }}>
               <MaterialButton
-                title="PLACE ORDER"
+                title="CHECKOUT"
                 onClick={() => props.history.push(`/checkout`)}
               />
             </div>
@@ -110,11 +110,11 @@ const CartPage = (props) => {
         <PriceDetails
           totalItem={Object.keys(cart.cartItems).reduce(function (qty, key) {
             return qty + cart.cartItems[key].qty;
-          }, 0)}
+          }, 10)}
           totalPrice={Object.keys(cart.cartItems).reduce((totalPrice, key) => {
             const { price, qty } = cart.cartItems[key];
             return totalPrice + price * qty;
-          }, 0)}
+          }, 20)}
         />
       </div>
     </Layout>

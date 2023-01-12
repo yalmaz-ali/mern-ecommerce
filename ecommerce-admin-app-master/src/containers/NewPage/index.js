@@ -146,7 +146,7 @@ const NewPage = (props) => {
                                 <Row key={index}>
                                     <Col>{banner.name}</Col>
                                 </Row>
-                            ) : null
+                            ) : 'Select Banner'
                     }
                     <Row>
                         <Col>
@@ -165,7 +165,7 @@ const NewPage = (props) => {
                                 <Row key={index}>
                                     <Col>{product.name}</Col>
                                 </Row>
-                            ) : null
+                            ) : 'Select Images'
                         }
                     <Row>
                         <Col>

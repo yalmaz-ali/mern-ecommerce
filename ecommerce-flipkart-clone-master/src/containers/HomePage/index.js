@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import MenuHeader from '../../components/MenuHeader'
 import Slideshow from '../../components/Slideshow'
 import Best from '../../components/BestSeller'
 import Box from '../../components/BoxCta'
@@ -14,6 +15,7 @@ import Block from '../../components/BlockHome'
 const HomePage = (props) => {
   return(
     <Layout>
+      <MenuHeader />
       <Slideshow/>
       <Best/>
       <Box/>

@@ -160,20 +160,20 @@ const AddressForm = (props) => {
         <div className="flexRow">
           <div style={inputContainer}>
             <MaterialInput
-              label="Landmark (Optional)"
+              label="Landmark"
               value={landmark}
               onChange={(e) => setLandmark(e.target.value)}
             />
           </div>
           <div style={inputContainer}>
             <MaterialInput
-              label="Alternate Phone (Optional)"
+              label="Alternate Phone"
               value={alternatePhone}
               onChange={(e) => setAlternatePhone(e.target.value)}
             />
           </div>
         </div>
-        <div>
+        <div style={{marginTop:"20px"}}>
           <label>Address Type</label>
           <div className="flexRow">
             <div>

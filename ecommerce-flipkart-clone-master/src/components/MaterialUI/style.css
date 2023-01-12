@@ -35,7 +35,7 @@
     /* background-color: #fb641b; */
     min-width: 300px;
     height: 35px;
-    border-bottom: 2px solid #2874f0;
+    border-bottom: 2px solid #9c51e0;
     position: relative;
     /* background-color: red; */
     margin-top: 25px;
@@ -69,7 +69,7 @@
     padding: 15px;
     font-size: 15px;
     outline: none;
-    background-color: #fb641b;
+    background-color: #9c51e0;
     color: #ffffff;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
     border: none;

@@ -16,7 +16,8 @@ const Card = (props) => {
               style={{
                 alignSelf: "center",
                 fontSize: "20px",
-                fontWeight: "500",
+                fontWeight: "800",
+                color:"#9c51e0",
               }}
             >
               {props.headerLeft}

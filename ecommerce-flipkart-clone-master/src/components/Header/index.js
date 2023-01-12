@@ -156,7 +156,7 @@ const Header = (props) => {
         <div className="authContainer">
           <div className="row">
             <div className="leftspace">
-              <h2>LOG IN</h2>
+              {signup?<h2 style={{color:"#9c51e0"}}>SIGN UP</h2>:<h2 style={{color:"#9c51e0"}}>LOG IN</h2>}
               <p>Get access to your Orders, Wishlist and Recommendations</p>
             </div>
             <div className="rightspace">
@@ -203,11 +203,11 @@ const Header = (props) => {
                   }}
                   onClick={userLogin}
                 />
-                <p style={{ textAlign: "center" }}>OR</p>
+                <p style={{ textAlign: "center",color:"darkblue" }}>OR</p>
                 <MaterialButton
                   title="Request OTP"
                   bgColor="#ffffff"
-                  textColor="#2874f0"
+                  textColor="#9c51e0"
                   style={{
                     margin: "20px 0",
                   }}

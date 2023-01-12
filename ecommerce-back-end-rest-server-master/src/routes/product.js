@@ -32,7 +32,7 @@ router.post(
   "/product/create",
   requireSignin,
   adminMiddleware,
-  uploadS3.array("productPicture"),
+  uploadS3.array(productPicture),
   createProduct
 );
 router.get("/products/:slug", getProductsBySlug);
