@@ -230,7 +230,7 @@ const Header = (props) => {
           <a href="/aboutUs" className="leftmenu" >
             ABOUT US
           </a>
-          <a href="/" className="leftmenu" >
+          <a href="/contactUs" className="leftmenu" >
             CONTACT US
           </a>
         </div>

@@ -43,14 +43,6 @@ const AboutUs = (props) => {
           </div>
         </div>
         <Box/>
-        <div className='arow'>
-          <div className='acol'>
-            <img className='aimage-map' src={map} alt='' />
-          </div>
-          <div className='aform'>
-            <Contact />
-          </div>
-        </div>
     </div>
     </Layout>
    )

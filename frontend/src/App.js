@@ -11,6 +11,7 @@ import CheckoutPage from "./containers/CheckoutPage";
 import OrderPage from "./containers/OrderPage";
 import OrderDetailsPage from "./containers/OrderDetailsPage";
 import AboutUs from "./containers/AboutUsPage";
+import ContactUs from "./containers/ContactUsPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/aboutUs" exact component={AboutUs} />
+          <Route path="/contactUs" exact component={ContactUs} />
           <Route path="/cart" component={CartPage} />
           <Route path="/checkout" component={CheckoutPage} />
           <Route path="/account/orders" component={OrderPage} />
