@@ -60,6 +60,7 @@ const Products = (props) => {
   const handleProductPictures = (e) => {
     setProductPictures([...productPictures, e.target.files[0]]);
   };
+  let i=1;
 
   const renderProducts = () => {
     return (
@@ -78,7 +79,7 @@ const Products = (props) => {
           {product.products.length > 0
             ? product.products.map((product) => (
                 <tr key={product._id}>
-                  <td>2</td>
+                  <td>{i++}</td>
                   <td>{product.name}</td>
                   <td>{product.price}</td>
                   <td>{product.quantity}</td>

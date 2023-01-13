@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductDetailsById } from "../../actions";
 import Layout from "../../components/Layout";
@@ -8,6 +8,7 @@ import { AiFillThunderbolt } from "react-icons/ai";
 import { MaterialButton } from "../../components/MaterialUI";
 import "./style.css";
 import { addToCart } from "../../actions";
+import MenuHeader from "../../components/MenuHeader";
 
 /**
  * @author
@@ -17,7 +18,7 @@ import { addToCart } from "../../actions";
 const ProductDetailsPage = (props) => {
   const dispatch = useDispatch();
   const product = useSelector((state) => state.product);
-
+  
   useEffect(() => {
     const { productId } = props.match.params;
     console.log(props);
@@ -29,12 +30,18 @@ const ProductDetailsPage = (props) => {
     dispatch(getProductDetailsById(payload));
   }, []);
 
+  // const [currimg,SetCurrimg]=useState(product.productDetails.productPictures[0].img);
+  
   if (Object.keys(product.productDetails).length === 0) {
     return null;
   }
+  // const imageRender=()=>{
+  //   console.log(1);
+  // }
 
   return (
     <Layout>
+      <MenuHeader/>
       {/* <div>{product.productDetails.name}</div> */}
       <div className="productDescriptionContainer">
         <div className="flexRow">
@@ -57,13 +64,13 @@ const ProductDetailsPage = (props) => {
             <div className="flexRow">
               <MaterialButton
                 title="ADD TO CART"
-                bgColor="#ff9f00"
+                bgColor="#53118F"
                 textColor="#ffffff"
                 style={{
                   marginRight: "5px",
                   padding:'10px'
                 }}
-                icon={<IoMdCart />}
+                icon={<IoMdCart style={{marginRight:"5px",marginBottom:"-2px"}}/>}
                 onClick={() => {
                   const { _id, name, price } = product.productDetails;
                   const img = product.productDetails.productPictures[0].img;
@@ -71,20 +78,20 @@ const ProductDetailsPage = (props) => {
                   props.history.push(`/cart`);
                 }}
               />
-              <MaterialButton
+              {/* <MaterialButton
                 title="BUY NOW"
-                bgColor="#fb641b"
+                bgColor="#933DC9"
                 textColor="#ffffff"
                 style={{
                   marginLeft: "5px",
-                  padding:'12px'
+                  padding:'10px'
                 }}
                 icon={<AiFillThunderbolt />}
-              />
+              /> */}
             </div>
           </div>
         </div>
-        <div>
+        <div style={{marginTop:"10px",marginLeft:"20px"}}>
           {/* home > category > subCategory > productName */}
           <div className="breed">
             <ul>
@@ -103,27 +110,27 @@ const ProductDetailsPage = (props) => {
           </div>
           {/* product description */}
           <div className="productDetails">
-            <p className="productTitle">{product.productDetails.name}</p>
-            <div>
+            <h4 className="productTitle">{product.productDetails.name}</h4>
+            <div style={{    margin: "10px 0px"}}>
               <span className="ratingCount">
-                4.3 <IoIosStar />
+                4.3 <IoIosStar/>
               </span>
               <span className="ratingNumbersReviews">
                 72,234 Ratings & 8,140 Reviews
               </span>
             </div>
-            <div className="extraOffer">
-              Extra <BiRupee />
+            {/* <div className="extraOffer">
+              Extra RS
               4500 off{" "}
-            </div>
+            </div> */}
             <div className="flexRow priceContainer">
               <span className="price">
-                <BiRupee />
+                RS{' '}
                 {product.productDetails.price}
               </span>
-              <span className="discount" style={{ margin: "0 10px" }}>
+              {/* <span className="discount" style={{ margin: "0 10px" }}>
                 22% off
-              </span>
+              </span> */}
               {/* <span>i</span> */}
             </div>
             <div>

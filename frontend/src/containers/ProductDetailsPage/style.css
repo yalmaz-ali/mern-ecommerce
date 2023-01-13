@@ -2,6 +2,7 @@
     display: flex;
     box-sizing: border-box;
     padding: 10px;
+    margin-top: 30px;
 }
 .verticalImageStack{
     width: 67px;
@@ -68,7 +69,7 @@
 }
 .ratingCount{
     display: inline-block;
-    background: #388e3c;
+    background: #933DC9;
     color: #fff;
     font-weight: 400;
     font-size: 12px;

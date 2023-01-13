@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductsBySlug } from "../../../actions";
 import Card from "../../../components/UI/Card";
-import { BiRupee } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 import "./style.css";
@@ -29,14 +28,8 @@ const ClothingAndAccessories = (props) => {
   }, []);
 
   return (
-    <div style={{ padding: "20px" }}>
-      <Card
-        style={{
-          boxSizing: "border-box",
-          padding: "10px",
-          display: "flex",
-        }}
-      >
+    <div className="caDiv">
+      <Card className='caMain'>
         {product.products.map((product) => (
           <div className="caContainer" onClick={consoleLog}>
             <Link
