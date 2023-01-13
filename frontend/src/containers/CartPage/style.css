@@ -1,0 +1,7 @@
+.cartContainer{
+    display: flex;
+    max-width: 92%;
+    margin: 15px auto;
+    justify-content: space-between;
+    margin-top: 50px;
+}

@@ -1,0 +1,26 @@
+.caContainer{
+    max-width: 250px;
+}
+.caImgContainer{
+    padding: 25px;
+    max-width: 240px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.caImgContainer > img{
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 10px;
+
+}
+.caProductName{
+    margin-left: 35px;
+    font-size: 12px;
+    padding: 10px 0;
+}
+.caProductPrice{
+    margin-left: 35px;
+    font-size: 12px;
+    font-weight: 600;
+}
