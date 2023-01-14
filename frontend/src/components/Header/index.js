@@ -75,20 +75,15 @@ const Header = (props) => {
       <DropdownMenu
         menu={<a className="fullName">{auth.user.fullName}</a>}
         menus={[
-          { label: "My Profile", href: "", icon: null },
-          { label: "SuperCoin Zone", href: "", icon: null },
-          { label: "Flipkart Plus Zone", href: "", icon: null },
+          { label: "Home", href: "", icon: null },
+          { label: "Cart", href: "/cart", icon: null },
           {
             label: "Orders",
             href: `/account/orders`,
             icon: null,
           },
-          { label: "Wishlist", href: "", icon: null },
-          { label: "My Chats", href: "", icon: null },
           { label: "Coupons", href: "", icon: null },
           { label: "Rewards", href: "", icon: null },
-          { label: "Notifications", href: "", icon: null },
-          { label: "Gift Cards", href: "", icon: null },
           { label: "Logout", href: "", icon: null, onClick: logout },
         ]}
       />
@@ -118,8 +113,7 @@ const Header = (props) => {
           // </a>
         }
         menus={[
-          { label: "My Profile", href: "", icon: null },
-          { label: "Flipkart Plus Zone", href: "", icon: null },
+          { label: "Home", href: "", icon: null },
           {
             label: "Orders",
             href: `/account/orders`,
@@ -128,9 +122,7 @@ const Header = (props) => {
               !auth.authenticate && setLoginModal(true);
             },
           },
-          { label: "Wishlist", href: "", icon: null },
-          { label: "Rewards", href: "", icon: null },
-          { label: "Gift Cards", href: "", icon: null },
+          { label: "Cart", href: "/cart", icon: null },
         ]}
         firstMenu={
           <div className="firstmenu">
@@ -140,7 +132,7 @@ const Header = (props) => {
                 setLoginModal(true);
                 setSignup(true);
               }}
-              style={{ color: "#2874f0" }}
+              style={{ color: "#2874f0",cursor:'pointer' }}
             >
               Sign Up
             </a>
@@ -223,9 +215,6 @@ const Header = (props) => {
         <div className="home">
           <a href="/" className="leftmenu" >
             HOME
-          </a>
-          <a href="/" className="leftmenu" >
-            SHOP
           </a>
           <a href="/aboutUs" className="leftmenu" >
             ABOUT US

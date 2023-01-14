@@ -3,6 +3,8 @@ import "./style.css";
 import pic from "../../images/data/instagram.png";
 import pic2 from "../../images/data/twitter.png";
 import pic3 from "../../images/data/facebook.png";
+import { login, signout, getCartItems, signup as _signup } from "../../actions";
+import { useDispatch, useSelector } from "react-redux";
 
 
 /**
@@ -11,6 +13,12 @@ import pic3 from "../../images/data/facebook.png";
  **/
 
 const Footer = () => {
+  const dispatch = useDispatch();
+
+  const logout = () => {
+    dispatch(signout());
+  };
+
   return (
     <div>
       <div className='containerF'>
@@ -50,7 +58,7 @@ const Footer = () => {
               <a className="pgs" href="/">Return Policy</a>
             </div>
             <div className='linkF'>
-              <a className="pgs" href="/">Orders</a>
+              <a className="pgs" href="/account/orders">Orders</a>
             </div>
             <div className='linkF'>
               <a className="pgs" href="/">Make a return</a>
@@ -69,7 +77,7 @@ const Footer = () => {
               <a className="anc" href='/aboutUs'>About Us</a>
             </div>
             <div className='linkF'>
-              <a className="anc" href='/'>Shop</a>
+              <a className="anc" href='/'>Social</a>
             </div>
             <div className='linkF'>
               <a className="anc" href='/'>Blog Post</a>
@@ -81,11 +89,21 @@ const Footer = () => {
             <div className='account-txtF'>My Account</div>
           </div>
           <div className='internal-42F'>
-            <div className="pgs2">Login</div>
-            <div className="pgs2">Register</div>
-            <div className="pgs2">Careers</div>
-            <div className="pgs2">Factory List</div>
-            <div className="pgs2">Explore</div>
+            <div className="pgs2" >
+              <a className="anc" href='/' onClick={logout}>Logout</a>
+            </div>
+            <div className="pgs2">
+              <a className="anc" href='/'>Register</a>
+            </div>
+            <div className="pgs2">
+              <a className="anc" href='/'>Careers</a>
+            </div>
+            <div className="pgs2">
+              <a className="anc" href='/'>Factory List</a>
+            </div>
+            <div className="pgs2">
+              <a className="anc" href='/'>Explore</a>
+            </div>
           </div>
         </div>
         <div className='internal-5F'>

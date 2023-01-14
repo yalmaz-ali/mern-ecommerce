@@ -83,7 +83,7 @@
 .slider-arrow {
   position: absolute;
   border-width: 0px;
-  z-index: 2;
+  z-index: 1;
   height: 7%;
   width: 97.8%;
   margin-top: 18%;
