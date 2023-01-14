@@ -207,8 +207,8 @@ const CheckoutPage = (props) => {
                   <span style={{ margin: "0 5px" }}>{auth.user.email}</span>
                 </div>
               ) : (
-                <div>
-                  <MaterialInput label="Email" />
+                <div style={{margin:'20px 0', color:'red'}}>
+                  PLEASE LOG IN TO FURTHER PROCEED
                 </div>
               )
             }
