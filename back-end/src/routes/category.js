@@ -9,12 +9,14 @@ const {
   requireSignin,
   adminMiddleware,
   superAdminMiddleware,
+  uploadS3
 } = require("../common-middleware");
 const router = express.Router();
 const shortid = require("shortid");
 const path = require("path");
 const multer = require("multer");
 
+/*
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path.join(path.dirname(__dirname), "uploads"));
@@ -25,12 +27,13 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage });
+*/
 
 router.post(
   "/category/create",
   requireSignin,
   superAdminMiddleware,
-  upload.single("categoryImage"),
+  uploadS3.single("categoryImage"),
   addCategory
 );
 router.get("/category/getcategory", getCategories);
@@ -38,7 +41,7 @@ router.post(
   "/category/update",
   requireSignin,
   superAdminMiddleware,
-  upload.array("categoryImage"),
+  uploadS3.array("categoryImage"),
   updateCategories
 );
 router.post(

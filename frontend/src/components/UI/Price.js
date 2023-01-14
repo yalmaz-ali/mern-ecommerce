@@ -15,7 +15,7 @@ const Price = (props) => {
         margin: "5px 0",
       }}
     >
-      <BiRupee />
+      RS.{' '}
       {props.value}
     </div>
   );

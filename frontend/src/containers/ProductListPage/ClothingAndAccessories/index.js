@@ -25,7 +25,7 @@ const ClothingAndAccessories = (props) => {
   useEffect(() => {
     const { match } = props;
     dispatch(getProductsBySlug(match.params.slug));
-  }, []);
+  }, [dispatch, props]);
 
   return (
     <div className="caDiv">
@@ -41,7 +41,7 @@ const ClothingAndAccessories = (props) => {
             <div>
               <div className="caProductName">{product.name}</div>
               <div className="caProductPrice">
-                {'RS '}
+                {'RS. '}
                 {product.price}
               </div>
             </div>

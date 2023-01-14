@@ -11,7 +11,7 @@ const Rating = (props) => {
     <span
       style={{
         display: "inline-block",
-        background: "#388e3c",
+        background: "#933dc9",
         color: "#fff",
         fontWeight: "400",
         fontSize: "12px",

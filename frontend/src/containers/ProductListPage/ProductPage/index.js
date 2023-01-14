@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProductPage } from '../../../actions';
 import getParams from '../../../utils/getParams';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import Card from '../../../components/UI/Card';
 
 /**
@@ -28,19 +28,28 @@ const ProductPage = (props) => {
 
 
     return (
-        <div style={{ margin: '0 10px' }}>
-            <h3>{page.title}</h3>
+        <div style={{ margin: '0 10px',
+            justifyContent:'center',
+            display:'flex',
+            flexDirection:'column',
+            alignItems:'center'
+            }}>
+            <h3 style={{color:'#9c51e0'}} >{page.title}</h3>
             <Carousel
+                // centerMode='true'
+                infiniteLoop='true'
+                dynamicHeight='true'
                 renderThumbs={() => {}}
             >
                 {
                     page.banners && page.banners.map((banner, index) => 
-                        <a 
+                        <a
                             key={index}
-                            style={{ display: 'block' }}
+                            style={{ display: 'block',width:'100%' }}
                             href={banner.navigateTo}
                         >
-                            <img src={banner.img} alt="" />
+                            <img src={banner.img} alt="" 
+                            style={{width:'70%',height:'400px'}}/>
                         </a>
                     )
                 }
@@ -49,22 +58,24 @@ const ProductPage = (props) => {
                 display: 'flex',
                 justifyContent: 'center',
                 flexWrap: 'wrap',
-                margin: '10px 0'
+                margin: '20px 0'
             }}>
                 {
                     page.products && page.products.map((product, index) => 
                         <Card 
                             key={index}
                             style={{
-                                width: '400px',
+                                width: '250px',
                                 height: '200px',
-                                margin: '5px'
+                                margin: '15px'
                             }}
                         >
-                            <img style={{
-                                width: '100%',
-                                height: '100%'
-                            }} src={product.img} alt="" />
+                            <a href={product.navigateTo}>
+                                <img style={{
+                                    width: '100%',
+                                    height: '100%'
+                                }} src={product.img} alt="" />
+                            </a>
                         </Card>
                     )
                 }
