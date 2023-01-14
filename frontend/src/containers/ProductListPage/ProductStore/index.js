@@ -34,7 +34,7 @@ const ProductStore = (props) => {
                 style={{
                   width: "96px",
                 }}
-                bgColor="#2874f0"
+                bgColor="#9c51e0"
                 fontSize="12px"
               />
             }

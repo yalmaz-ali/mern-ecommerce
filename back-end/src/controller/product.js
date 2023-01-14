@@ -59,6 +59,7 @@ exports.getProductsBySlug = (req, res) => {
                   under1_5k: 1500,
                   under2k: 2000,
                   under3k: 3000,
+                  under5k: 5000,
                 },
                 productsByPrice: {
                   under500: products.filter((product) => product.price <= 500),
@@ -73,6 +74,9 @@ exports.getProductsBySlug = (req, res) => {
                   ),
                   under3k: products.filter(
                     (product) => product.price > 2000 && product.price <= 3000
+                  ),
+                  under5k: products.filter(
+                    (product) => product.price > 3000 && product.price <= 5000
                   ),
                 },
               });
