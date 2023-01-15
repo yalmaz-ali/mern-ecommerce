@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
-// import flipkartLogo from "../../images/logo/flipkart.png";
-import jewelleryLogo from "../../images/logo/img.jpg";
 import loginImg from "../../images/logo/loginImg.jpg";
-// import goldenStar from "../../images/logo/golden-star.png";
-import { IoIosArrowDown, IoIosCart, IoIosSearch } from "react-icons/io";
+import {IoIosSearch } from "react-icons/io";
 import {
   Modal,
   MaterialInput,
@@ -12,7 +9,7 @@ import {
   DropdownMenu,
 } from "../MaterialUI";
 import { useDispatch, useSelector } from "react-redux";
-import { login, signout, getCartItems, signup as _signup } from "../../actions";
+import { login, signout, signup as _signup } from "../../actions";
 import Cart from "../UI/Cart";
 
 /**

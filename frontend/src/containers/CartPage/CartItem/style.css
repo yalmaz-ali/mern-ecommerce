@@ -1,6 +1,10 @@
 .cartItemContainer{
     margin: 10px 5px;
 }
+.cartItemContainer text{
+    color: red;
+    margin: 10px;
+}
 .cartProImgContainer{
     width: 112px;
     height: 112px;
@@ -27,6 +31,7 @@
     display: flex;
     justify-content: space-between;
     flex: 1;
+    margin-left: 10px;
 }
 
 .cartActionBtn{

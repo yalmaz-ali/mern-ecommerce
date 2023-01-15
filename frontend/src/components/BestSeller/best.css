@@ -20,10 +20,23 @@
 }
 .contents{
     width: 100%;
-    height: 85%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+}
+.contents a{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.contents a img{
+    border-radius: 20px;
 }
 .set{
     width: 225px;
-    margin-left: 30px;
+    height: 250px;
     cursor: pointer;
+}
+.bestimg{
 }

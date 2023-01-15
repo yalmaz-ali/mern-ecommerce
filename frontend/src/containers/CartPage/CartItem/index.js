@@ -24,6 +24,7 @@ const CartItem = (props) => {
 
   return (
     <div className="cartItemContainer">
+      <text>LOGIN TO REMOVE ITEMS</text>
       <div className="flexRow">
         <div className="cartProImgContainer">
           <img src={img} alt={""} />

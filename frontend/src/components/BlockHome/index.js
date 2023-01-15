@@ -24,7 +24,7 @@ const Block = (props) => {
                 </div> 
                 <div className='blkBtn'>
                     <button onClick={onclick}>
-                        SHOP
+                        SHOP HERE
                     </button>
                 </div>
             </div>
@@ -34,7 +34,7 @@ const Block = (props) => {
                 </div> 
                 <div className='blkBtn2'>
                     <button onClick={onclick}>
-                        SHOP
+                        SHOP HERE
                     </button>
                 </div>
             </div>
@@ -46,7 +46,7 @@ const Block = (props) => {
                 </div> 
                 <div className='blkBtn'>
                     <button onClick={onclick}>
-                        SHOP
+                        SHOP HERE
                     </button>
                 </div>
             </div>
@@ -56,7 +56,7 @@ const Block = (props) => {
                 </div> 
                 <div className='blkBtn2'>
                     <button onClick={onclick}>
-                        SHOP
+                        SHOP HERE
                     </button>
                 </div>
             </div>

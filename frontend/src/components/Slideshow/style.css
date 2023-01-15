@@ -80,6 +80,10 @@
   border-width: 0px;
   cursor: pointer;
 }
+.slider .slide .btn button a{
+  text-decoration: none;
+  color: white;
+}
 .slider-arrow {
   position: absolute;
   border-width: 0px;

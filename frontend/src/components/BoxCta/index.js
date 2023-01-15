@@ -19,7 +19,7 @@ const Box = (props) => {
         </div>
         <div className='btnDiv'>
             <button onClick={onclick}>
-                SHOP
+                SHOP HERE
             </button>
         </div>
     </div>

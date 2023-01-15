@@ -62,8 +62,8 @@ export default class SimpleSlider extends Component {
                 <img src={group30} alt="description" className='group30'/>
               </div>
               <div className='btn'>
-                <button >
-                  EXPLORE
+                <button>
+                  <a href='/Necklace-3/63c10ecf32f76d11e8fd589a/p'>EXPLORE</a>
                 </button>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default class SimpleSlider extends Component {
               </div>
               <div className='btn'>
                 <button >
-                  EXPLORE
+                  <a href='Bridal-5/63c0ddaad064e42aec4ad9a7/p'>EXPLORE</a>
                 </button>
               </div>
             </div>

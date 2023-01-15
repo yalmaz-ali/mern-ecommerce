@@ -11,8 +11,9 @@ import set5 from "../../images/data/Product5.png"
 * @function Best
 **/
 function onclick(props){
-    var index=props;
-    console.log(index);
+    var page = '/Necklace-3/63c10ecf32f76d11e8fd589a/p';
+    console.log(page);
+    
 }
 
 const Best = (props) => {
@@ -23,11 +24,62 @@ const Best = (props) => {
             <a href='/' className='view'>View All</a>
         </div>
         <div className='contents'>
-            <img className='set' src={set1} alt="PRODUCT" onClick={onclick(1)}/>
-            <img className='set' src={set2} alt="PRODUCT" onClick={onclick(2)}/>
-            <img className='set' src={set3} alt="PRODUCT" onClick={onclick(3)}/>
-            <img className='set' src={set4} alt="PRODUCT" onClick={onclick(4)}/>
-            <img className='set' src={set5} alt="PRODUCT" onClick={onclick(5)}/>
+            <a  href='/Necklace/63c277620ee80219f023a48f/p'>
+                <img className='set' src={set1} alt="PRODUCT"/>
+                <div className='bestimg'>
+                    <div className="caProductName">
+                        Necklace
+                    </div>
+                    <div className="caProductPrice">
+                        {'RS. '}500
+                    </div>
+                </div>
+            </a>
+            <a  href='/Jhoomer/63c2d60c0ee80219f023a5f6/p'>
+                <img className='set' src={set2} alt="PRODUCT"/>
+                <div className='bestimg'>
+                    <div className="caProductName">
+                        Jhoomer
+                    </div>
+                    <div className="caProductPrice">
+                        {'RS. '}2000
+                    </div>
+                </div>
+            </a>
+            <a  href='/Mala/63c1aa5935f93817a096c113/p'>
+                <img className='set' src={set3} alt="PRODUCT"/>
+                <div className='bestimg'>
+                    <div className="caProductName">
+                        Mala
+                    </div>
+                    <div className="caProductPrice">
+                        {'RS. '}1000
+                    </div>
+                </div>
+            </a>
+            <a  href='/Bridal-6/63c0e164792ee224b09e1a94/p'>
+                <img className='set' src={set4} alt="PRODUCT"/>
+                <div className='bestimg'>
+                    <div className="caProductName">
+                        Bridal-6
+                    </div>
+                    <div className="caProductPrice">
+                        {'RS. '}999
+                    </div>
+                </div>
+            </a>
+            <a  href='/Bali-4/63c2cccd0ee80219f023a56c/p'>
+                <img className='set' src={set5} alt="PRODUCT"/>
+                <div className='bestimg'>
+                    <div className="caProductName">
+                        Bali-4
+                    </div>
+                    <div className="caProductPrice">
+                        {'RS. '}3100
+                    </div>
+                </div>
+            </a>
+            
         </div>
     </div>
    )
