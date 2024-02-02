@@ -60,7 +60,7 @@ const Products = (props) => {
   const handleProductPictures = (e) => {
     setProductPictures([...productPictures, e.target.files[0]]);
   };
-  let i=1;
+  let i = 1;
 
   const renderProducts = () => {
     return (
@@ -78,29 +78,33 @@ const Products = (props) => {
         <tbody>
           {product.products.length > 0
             ? product.products.map((product) => (
-                <tr key={product._id}>
-                  <td>{i++}</td>
-                  <td>{product.name}</td>
-                  <td>{product.price}</td>
-                  <td>{product.quantity}</td>
-                  <td>{product.category.name}</td>
-                  <td>
-                    <button onClick={() => showProductDetailsModal(product)}>
-                      info
-                    </button>
-                    <button
-                      onClick={() => {
+              <tr key={product._id}>
+                <td>{i++}</td>
+                <td>{product.name}</td>
+                <td>{product.price}</td>
+                <td>{product.quantity}</td>
+                <td>{product.category.name}</td>
+                <td>
+                  <button onClick={() => showProductDetailsModal(product)}>
+                    info
+                  </button>
+                  <button
+                    onClick={() => {
+
+                      if (window.confirm("You sure want to delete this product!")) {
                         const payload = {
                           productId: product._id,
                         };
                         dispatch(deleteProductById(payload));
-                      }}
-                    >
-                      del
-                    </button>
-                  </td>
-                </tr>
-              ))
+
+                      }
+                    }}
+                  >
+                    del
+                  </button>
+                </td>
+              </tr>
+            ))
             : null}
         </tbody>
       </Table>
@@ -153,8 +157,8 @@ const Products = (props) => {
         </select>
         {productPictures.length > 0
           ? productPictures.map((pic, index) => (
-              <div key={index}>{pic.name}</div>
-            ))
+            <div key={index}>{pic.name}</div>
+          ))
           : null}
         <input
           type="file"
@@ -227,7 +231,7 @@ const Products = (props) => {
       </Modal>
     );
   };
-  
+
   return (
     <Layout sidebar>
       <Container>
@@ -235,7 +239,7 @@ const Products = (props) => {
           <Col md={12}>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <h3>Products</h3>
-              <button style={{borderRadius:'5px'}} onClick={handleShow}>Add</button>
+              <button style={{ borderRadius: '5px' }} onClick={handleShow}>Add</button>
             </div>
           </Col>
         </Row>
