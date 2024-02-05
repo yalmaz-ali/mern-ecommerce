@@ -13,17 +13,17 @@ import Block from '../../components/BlockHome'
 **/
 
 const HomePage = (props) => {
-  return(
+  return (
     <Layout>
       <MenuHeader />
-      <Slideshow/>
-      <Best/>
-      <Box/>
-      <New/>
-      <Block/>
+      <Slideshow />
+      <Best />
+      <Box />
+      <New />
+      <Block />
     </Layout>
-   )
+  )
 
- }
+}
 
 export default HomePage

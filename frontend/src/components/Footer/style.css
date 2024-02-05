@@ -3,6 +3,7 @@
     margin-top: 70px;
     height: 250px;
     display: flex;
+    flex-shrink:0;
     background-image: url("../../images/data/JEW.png");
     background-position:right;
     background-size: 300px;

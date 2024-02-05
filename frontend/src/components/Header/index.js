@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import loginImg from "../../images/logo/loginImg.jpg";
-import {IoIosSearch } from "react-icons/io";
+import { IoIosSearch } from "react-icons/io";
 import {
   Modal,
   MaterialInput,
@@ -93,9 +93,9 @@ const Header = (props) => {
         menu={
           <div className="loginButton">
             <a onClick={() => {
-                setSignup(false);
-                setLoginModal(true);
-              }}>
+              setSignup(false);
+              setLoginModal(true);
+            }}>
               <img src={loginImg} className="loginimage" alt="pic" />
             </a>
           </div>
@@ -129,7 +129,7 @@ const Header = (props) => {
                 setLoginModal(true);
                 setSignup(true);
               }}
-              style={{ color: "#2874f0",cursor:'pointer' }}
+              style={{ color: "#2874f0", cursor: 'pointer' }}
             >
               Sign Up
             </a>
@@ -145,7 +145,7 @@ const Header = (props) => {
         <div className="authContainer">
           <div className="row">
             <div className="leftspace">
-              {signup?<h2 style={{color:"#9c51e0"}}>SIGN UP</h2>:<h2 style={{color:"#9c51e0"}}>LOG IN</h2>}
+              {signup ? <h2 style={{ color: "#9c51e0" }}>SIGN UP</h2> : <h2 style={{ color: "#9c51e0" }}>LOG IN</h2>}
               <p>Get access to your Orders, Wishlist and Recommendations</p>
             </div>
             <div className="rightspace">
@@ -181,7 +181,7 @@ const Header = (props) => {
                   label="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  // rightElement={<a href="#">Forgot?</a>}
+                // rightElement={<a href="#">Forgot?</a>}
                 />
                 <MaterialButton
                   title={signup ? "Register" : "Login"}
@@ -192,7 +192,7 @@ const Header = (props) => {
                   }}
                   onClick={userLogin}
                 />
-                <p style={{ textAlign: "center",color:"darkblue" }}>OR</p>
+                <p style={{ textAlign: "center", color: "darkblue" }}>OR</p>
                 <MaterialButton
                   title="Request OTP"
                   bgColor="#ffffff"
@@ -207,7 +207,7 @@ const Header = (props) => {
         </div>
       </Modal>
       <div className="subHeader">
-        
+
         {/* HOME */}
         <div className="home">
           <a href="/" className="leftmenu" >
@@ -221,11 +221,11 @@ const Header = (props) => {
           </a>
         </div>
         {/* HOME ENDS */}
-        
+
         {/* Logo  */}
         <div className="logo">
           <a href="/" className="logoanchor">
-            <text className="logoimage">THE JEWELLERY TALE</text>
+            <span className="logoimage">THE JEWELLERY TALE</span>
             {/* <img src={jewelleryLogo} className="logoimage" alt="" /> */}
           </a>
         </div>
@@ -237,30 +237,28 @@ const Header = (props) => {
 
           {/* CART */}
           <div className="cartdiv">
-            <a href={`/cart`} className="cart">
-              <Cart count={Object.keys(cart.cartItems).length}/>
-            </a>
+            <Cart count={Object.keys(cart.cartItems).length} />
           </div>
           {/* CART ENDS */}
 
           {/* search component */}
-            <div className="searchInputContainer">
-              <div className="searchIconContainer">
-                <IoIosSearch
-                  style={{
-                    color: "white",
-                    width:"20px",
-                    marginTop:"5px"
-                  }}
-                />
-              </div>
-              <div className="header-search">
-                <input
-                  className="searchInput"
-                  placeholder={"SEARCH"}
-                />
-              </div>
+          <div className="searchInputContainer">
+            <div className="searchIconContainer">
+              <IoIosSearch
+                style={{
+                  color: "white",
+                  width: "20px",
+                  marginTop: "5px"
+                }}
+              />
             </div>
+            <div className="header-search">
+              <input
+                className="searchInput"
+                placeholder={"SEARCH"}
+              />
+            </div>
+          </div>
           {/* search component ends here */}
           {auth.authenticate ? renderLoggedInMenu() : renderNonLoggedInMenu()}
         </div>

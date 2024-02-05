@@ -20,7 +20,11 @@ const Footer = () => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex"
+      }}
+    >
       <div className='containerF'>
         <div className='ineternal-1F'>
           <div className='internal-11F'>
@@ -109,17 +113,17 @@ const Footer = () => {
         <div className='internal-5F'>
           <div className='image-2F'>
             <a href='/'>
-              <img src={pic2} alt='' />
+              <img src={pic2} alt='twitter' />
             </a>
           </div>
           <div className='image-3F'>
             <a href='/'>
-              <img src={pic3} alt='' />
+              <img src={pic3} alt='facebook' />
             </a>
           </div>
           <div className='image-4F'>
             <a href='/'>
-              <img src={pic} alt='' />
+              <img src={pic} alt='instagram' />
             </a>
           </div>
         </div>

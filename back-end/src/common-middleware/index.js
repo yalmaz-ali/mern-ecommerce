@@ -4,6 +4,9 @@ const shortid = require("shortid");
 const path = require("path");
 const multerS3 = require("multer-s3");
 const aws = require("aws-sdk");
+const env = require("dotenv");
+
+env.config();
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -15,8 +18,8 @@ const storage = multer.diskStorage({
 });
 
 const s3 = new aws.S3({
-  accessKeyId:'xxxxxxxxxxxxxxxxxxxxx',
-  secretAccessKey:'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+  accessKeyId: process.env.ACCESS_KEY_S3,
+  secretAccessKey: process.env.SECRET_ACCESS_KEY_S3
 });
 
 exports.upload = multer({ storage });
@@ -24,7 +27,7 @@ exports.upload = multer({ storage });
 exports.uploadS3 = multer({
   storage: multerS3({
     s3: s3,
-    bucket: 'mern-app-tale',
+    bucket: 'thejewellerytale',
     acl: 'public-read',
     metadata: function (req, file, cb) {
       cb(null, { fieldName: file.fieldname });

@@ -110,11 +110,10 @@ exports.getCartItems = (req, res) => {
   //}
 };
 
-// new update remove cart items
 exports.removeCartItems = (req, res) => {
   const { productId } = req.body.payload;
   if (productId) {
-    Cart.update(
+    Cart.updateOne(
       { user: req.user._id },
       {
         $pull: {
